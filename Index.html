@@ -1,13 +1,39 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema de Registro de Juegos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="Style.css">
+    <title>Encriptador</title>
 </head>
 <body>
-    <head></head>
-    <main></main>
-    <footer></footer>
+    <header class="Contenido">
+        <img class="Img" src="./img/Logo.png" alt="Imagen del Logo de Alura">
+    </header>
+    <main class="Contenido">
+        <Article class="ContenidoIzquierda">
+            <textarea class="ContenidoTexto" 
+              onfocus="if (this.value === 'Ingrese el texto aquí') { this.value = ''; }" 
+              onblur="if (this.value === '') { this.value = 'Ingrese el texto aquí'; }"
+              oninput="autoResize(this)">Ingrese el texto aquí</textarea>
+            <p class="ContenidoP"><img src="./img/Vector.png" alt="Imagen de signo exclamacion">Solo letras minúsculas y sin acentos</p>
+            <button class="ContenidoBotonE" onclick="encriptarTexto()">Encriptar</button>
+            <button class="ContenidoBotonD" onclick="desencriptarTexto()">Desencriptar</button>
+        </Article>
+        <div class="ContenidoBlanco">
+            <img class="ContenidoImg" src="./img/Muñeco.png" alt="Muñeco sentado">
+            <h2 class="ContenidoBlancoSubtitulo">Ningún mensaje fue encontrado</h2>
+            <p class="ContenidoBlancoP">Ingresa el texto que desees encriptar o desencriptar.</p>
+            <div class="ContenidoEncriptado" style="display: none;">
+                <div id="textoEncriptado" class="ContenidoEncriptadoTexto"></div>
+                <button class="ContenidoBotonCopiar" onclick="copiarTexto()">Copiar</button>
+            </div>
+        </div>
+    </main>
+    <footer class="Contenido"></footer>
+    <script src="./Index.js"></script>
 </body>
 </html>
