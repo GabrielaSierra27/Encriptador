@@ -1,0 +1,238 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    background-color: #F3F5FC;
+    height: 100vh;
+}
+
+.Img {
+    margin: 40px 0 0 40px;
+}
+
+.Contenido {
+    display: flex;
+    flex: 1;
+}
+
+.ContenidoTexto {
+    background-color: #F3F5FC;
+    margin: 80px 0 0 240px;
+    font-size: 2rem;
+    border: none;
+    width: 50%;
+    resize: none;
+    height: 200px;
+    max-height: calc(2rem * 17);
+    color: #0A3871;
+    position: absolute;
+}
+
+.ContenidoP {
+    font-size: 12px;
+    margin: 700px 0 20px 240px;
+    color: #495057;
+    display: flex;
+    gap: 10px;
+    position: absolute;
+}
+
+.ContenidoBotonE, .ContenidoBotonD {
+    font-size: 1rem;
+    border-radius: 24px;
+    padding: 12px 24px;
+    width: 328px;
+    height: 67px;
+    margin-top: 740px;
+    cursor: pointer;
+}
+
+.ContenidoBotonE {
+    margin-left: 240px;
+    background-color: #0A3871;
+    color: #FFFFFF;
+}
+
+.ContenidoBotonD {
+    margin-left: 30px;
+    background-color: #F3F5FC;
+    color: #0A3871;
+    border: 1px solid #0A3871;
+}
+
+.ContenidoBlanco {
+    background-color: #FFFFFF;
+    border-radius: 32px;
+    margin-left: 200px;
+    margin-right: 35px;
+    text-align: center;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.ContenidoImg {
+    max-width: 100%;
+    max-height: 100%;
+    width: 336px;
+    height: 304px; 
+    object-fit: contain;
+    margin-bottom: 30px;
+}
+
+.ContenidoBlancoSubtitulo {
+    font-weight: 700;
+    size: 24px;
+    color: #343A40;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.ContenidoBlancoP {
+    size: 16px;
+    color: #495057;
+    text-align: center;
+}
+
+.ContenidoEncriptado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    position: relative;
+}
+
+.ContenidoEncriptadoTexto {
+    flex: 1;
+    overflow-y: auto;
+    word-wrap: break-word;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+    width: 100%;
+    color: #495057;
+    font-size: 24px;
+    border: none;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+}
+
+.ContenidoBotonCopiar {
+    font-size: 1rem;
+    border-radius: 24px;
+    padding: 12px 24px;
+    width: 328px;
+    height: 67px;
+    background-color: #FFFFFF;
+    color: #0A3871;
+    border: 1px solid #0A3871;
+    cursor: pointer;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@media (max-width: 800px) {
+    .Img {
+        margin: 20px 0 0 30px;
+        max-width: 100%;
+        max-height: 100%;
+        width: 80px;
+        height: 36px; 
+    }
+
+    .Contenido {
+        flex-direction: column;
+    }
+
+    .ContenidoTexto {
+        margin: 80px 0 0 50px;
+        width: 100%;
+    }
+
+    .ContenidoP {
+        margin: 650px 0 20px 50px;
+    }
+
+    .ContenidoBotonE, .ContenidoBotonD {
+        width: 290px;
+        margin-top: 700px;
+    }
+    
+    .ContenidoBotonE { 
+        margin-left: 50px;
+    }
+
+    .ContenidoBotonD {
+        margin-left: 5px;
+    }
+
+    .ContenidoBlanco {
+        order: 2; 
+        margin-top: 80px; 
+        margin-left: 50px;
+        width: 80%;
+        text-align: center;
+        justify-content: center;
+        width: 550px;
+        height: 300px;
+    }
+
+    .ContenidoImg {
+        display: none;
+    }
+}
+
+@media (max-width: 400px) {
+    .Img {
+        margin-left: 3px;
+    }
+
+    .ContenidoTexto {
+        margin: 80px 0 0 20px;
+        width: calc(100% - 40px);
+    }
+
+    .ContenidoP {
+        margin: 650px 0 20px 20px;
+    }
+
+    .ContenidoBotonE, .ContenidoBotonD {
+        margin-left: 20px;
+        width: calc(100% - 40px);
+        display: block;
+    }
+
+    .ContenidoBotonD {
+        margin-top: 20px;
+    }
+
+    .ContenidoBlanco {
+        margin-left: 20px;
+        margin-right: 20px;
+        width: calc(100% - 40px);
+        margin-top: 20px;
+    }
+
+    .ContenidoImg {
+        display: none;
+    }
+
+    .ContenidoBotonCopiar {
+        width: calc(100% - 40px);
+    }
+}
